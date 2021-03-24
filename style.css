@@ -1,0 +1,158 @@
+
+/*COMMON STYLES*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    
+    font-family: "Barlow Semi Condensed",sans-serif;
+    
+}
+
+body{
+    background-color: hsl(210, 46%, 95%) ;
+    font-size: 13px;
+}
+
+.pic-name-container{
+    display: flex;
+    
+}
+
+.name-verified{
+    align-self: center;
+    margin-left: 10px;
+    color: white;
+}
+
+.name-verified p{
+    margin: 0;
+}
+
+.name-verified p:nth-child(2){
+    opacity: 50%;
+}
+
+.profile-pic img{
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+}
+
+.text p:nth-child(1){
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+    text-align: left;
+}
+
+.text p:nth-child(2){
+    color: white;
+    opacity: 70%;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.grey.text p:nth-child(1){
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: hsl(217, 19%, 35%);
+    text-align: left;
+}
+
+.grey .text p:nth-child(2){
+    color: hsl(217, 19%, 35%);
+    opacity: 70%;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.card-padding{
+    padding: 30px;
+}
+.grey p{
+    color: hsl(217, 19%, 35%);
+}
+/*PAGE LAYOUT STYLE*/
+
+.grid-container{
+    
+    padding-top: 5%;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "daniel   daniel  jonathan  kira"
+                         "jeanette patrick patrick   kira";
+    gap: 20px;
+}
+
+.attribution{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/*CARDS STYLES*/
+.daniel-card-container{
+    background-color: hsl(263, 55%, 52%);
+    border-radius: 10px;
+    
+    position: relative; 
+    grid-area: daniel;
+}
+
+.daniel-card-container .watermark{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 10%;
+
+}
+
+
+
+.jonathan-card-container{
+    background-color:hsl(217, 19%, 35%);
+    border-radius: 10px;
+    grid-area: jonathan;
+}
+
+.kira-card-container{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    grid-area: kira;
+    
+}
+
+.jeanette-card-container{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    grid-area: jeanette;
+    
+}
+
+.patrick-card-container{
+    background-color: hsl(219, 29%, 14%);
+    border-radius: 10px;
+    grid-area: patrick;
+    
+}
+
+@media only screen and (max-width:450px){
+    .grid-container{
+    grid-template-columns: 1fr;
+    
+    grid-template-areas: "daniel"
+                         "jonathan"
+                         "jeanette"
+                         "patrick"
+                         "kira";
+    }
+}
